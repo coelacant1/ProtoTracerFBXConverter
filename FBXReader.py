@@ -46,6 +46,7 @@ class ShapeKey:
     Vertices = []
 
 class MorphObject:
+    name = ""
     baseMesh = Object3D()
     shapeKeys = []
 
@@ -104,7 +105,7 @@ def GetMeshShapeCount(dataString):
 #		PolygonVertexIndex: *99 {
 #			a: 1,2,-1,0,3,-2,4,0,-3,4,3,-1,12,13,-12,13,14,-9,7,13,-13,6,12,-12,11,13,-9,6,10,-13,10,15,-13,10,9,-16,7,5,-14,15,7,-13,13,5,-15,5,16,-15,19,18,-18,19,20,-19,20,21,-19,20,22,-22,21,22,-31,25,23,-25,22,23,-31,18,28,-18,24,27,-26,28,26,-18,28,29,-27,22,31,-24,23,31,-25,34,33,-33,34,35,-34,36,35,-35,36,37,-36
 #		}
-def GetBaseMesh(dataString):
+def GetBaseMesh(dataString, scale):
     lineNumber = 0
     lines = dataString.splitlines()
     
@@ -125,9 +126,9 @@ def GetBaseMesh(dataString):
             for i in range(0, vertexCount, 3):
                 vertex = Vector3D()
 
-                vertex.X = verticesXYZ[i]
-                vertex.Y = verticesXYZ[i + 1]
-                vertex.Z = verticesXYZ[i + 2]
+                vertex.X = verticesXYZ[i] * scale
+                vertex.Y = verticesXYZ[i + 1] * scale
+                vertex.Z = verticesXYZ[i + 2] * scale
 
                 print("Vertex: [", vertex.X, ",", vertex.Y, ",", vertex.Z, "]")
 
@@ -147,7 +148,7 @@ def GetBaseMesh(dataString):
 
                 triangles.append(triangle)
 
-            baseMesh.ObjectParams = GetMeshParameters(dataString)
+            baseMesh.ObjectParams = GetMeshParameters(dataString, scale)
             baseMesh.TriangleCount = triangleCount
             baseMesh.Triangles = triangles
             baseMesh.VertexCount = vertexCount
@@ -170,7 +171,7 @@ def GetBaseMesh(dataString):
 #   Vertices: *51 {
 #       a: 2.37597942352295,-2.99088287353516,0,2.52437686920166,-3.26673984527588,0,3.14269971847534,-2.70812797546387,0,1.77199268341064,-3.13370132446289,0,2.21885299682617,-2.68759822845459,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0
 #   }
-def GetMeshShapeKeys(dataString):
+def GetMeshShapeKeys(dataString, scale):
     lineNumber = 0
     lines = dataString.splitlines()
     
@@ -180,6 +181,7 @@ def GetMeshShapeKeys(dataString):
         if line.find("\"Shape\" {") >= 0:
             shapeKey = ShapeKey()
             
+            name = lines[lineNumber].split("\"Geometry::")[1].split("\"")[0]
             indexCount = int(lines[lineNumber + 2].split(": *")[1].split(" ")[0])
             indexes = [int(i) for i in lines[lineNumber + 3].split(": ")[1].split(",")]
             
@@ -191,15 +193,15 @@ def GetMeshShapeKeys(dataString):
             for i in range(0, vertexCount, 3):
                 vertex = Vector3D()
 
-
-                vertex.X = verticesXYZ[i]
-                vertex.Y = verticesXYZ[i + 1]
-                vertex.Z = verticesXYZ[i + 2]
+                vertex.X = verticesXYZ[i] * scale
+                vertex.Y = verticesXYZ[i + 1] * scale
+                vertex.Z = verticesXYZ[i + 2] * scale
 
                 print("Vertex: [", vertex.X, ",", vertex.Y, ",", vertex.Z, "]")
 
                 vertices.append(vertex)
 
+            shapeKey.Name = name
             shapeKey.IndexCount = indexCount
             shapeKey.Indexes = indexes
             shapeKey.VertexCount = vertexCount
@@ -207,7 +209,7 @@ def GetMeshShapeKeys(dataString):
 
             shapeKeys.append(shapeKey)
 
-            print("Created shape key with ", indexCount, " modified indices and ", vertexCount, "modified vertex values.")
+            print("Created shape key ", name, " with ", indexCount, " modified indices and ", vertexCount, "modified vertex values.")
         
         lineNumber += 1
     
@@ -223,7 +225,7 @@ def GetMeshShapeKeys(dataString):
 #        P: "Lcl Translation", "Lcl Translation", "", "A",-0.349570542573929,-0.286012262105942,0
 #        P: "Lcl Rotation", "Lcl Rotation", "", "A",9.33466682838942e-06,-0,0
 #    }
-def GetMeshParameters(dataString):
+def GetMeshParameters(dataString, scale):
     lineNumber = 0
     lines = dataString.splitlines()
 
@@ -234,9 +236,9 @@ def GetMeshParameters(dataString):
             splitTranslation = lines[lineNumber + 5].split(",")
             splitRotation    = lines[lineNumber + 6].split(",")
             
-            objParam.Position.X = float(splitTranslation[4])
-            objParam.Position.Y = float(splitTranslation[5])
-            objParam.Position.Z = float(splitTranslation[6])
+            objParam.Position.X = float(splitTranslation[4]) * scale
+            objParam.Position.Y = float(splitTranslation[5]) * scale
+            objParam.Position.Z = float(splitTranslation[6]) * scale
             objParam.Rotation.X = float(splitRotation[4])
             objParam.Rotation.Y = float(splitRotation[5])
             objParam.Rotation.Z = float(splitRotation[6])
@@ -250,11 +252,11 @@ def GetMeshParameters(dataString):
 
     return objParam
 
-
-def GetMorphObject(dataString):
+def GetMorphObject(dataString, name, scale):
     morph = MorphObject()
 
-    morph.baseMesh = GetBaseMesh(dataString)
-    morph.shapeKeys = GetMeshShapeKeys(dataString)
+    morph.name = name
+    morph.baseMesh = GetBaseMesh(dataString, scale)
+    morph.shapeKeys = GetMeshShapeKeys(dataString, scale)
 
     return morph
