@@ -22,7 +22,7 @@ class MorphCreator:
         return enums
 
     def GetBasisVertices(self):
-        basisVertices = "\tVector3D basisVertices[" + str(self.morphObj.baseMesh.VertexCount) + "] = {"
+        basisVertices = "\tVector3D basisVertices[" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "] = {"
 
         for i, vertex in enumerate(self.morphObj.baseMesh.Vertices):
             if i in {len(self.morphObj.baseMesh.Vertices) - 1}:
@@ -44,7 +44,7 @@ class MorphCreator:
         return basisIndexes
 
     def GetBasisObject(self):
-        return "\tObject3D basisObj = Object3D(" + str(self.morphObj.baseMesh.VertexCount) + ", " + str(self.morphObj.baseMesh.TriangleCount) + ", basisVertices, basisIndexes);\n\n"
+        return "\tObject3D basisObj = Object3D(" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + ", " + str(self.morphObj.baseMesh.TriangleCount) + ", basisVertices, basisIndexes);\n\n"
         
     def GetMorphIndexes(self):
         morphIndexes = "\tstatic const byte morphCount = " + str(len(self.morphObj.shapeKeys)) + ";\n"
@@ -66,7 +66,7 @@ class MorphCreator:
         morphVectors = ""
 
         for shapeKey in self.morphObj.shapeKeys:
-            morphVectors += "\tVector3D " + shapeKey.Name + "Vectors[" + str(shapeKey.VertexCount) + "] = {"
+            morphVectors += "\tVector3D " + shapeKey.Name + "Vectors[" + str(int(shapeKey.VertexCount / 3)) + "] = {"
 
             for i, vertex in enumerate(shapeKey.Vertices):
                 if i in {len(shapeKey.Vertices) - 1}:
