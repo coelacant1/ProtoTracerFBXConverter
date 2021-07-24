@@ -5,17 +5,9 @@
 # input in meters, output in mm
 from FBXReader import *
 from MorphCreator import *
+import os
 
-
-#convert binary fbx to ascii
-def BinaryToAscii(filename):
-    print("Converting Binary FBX to Ascii FBX...")
-
-
-
-    print("Ascii FBX created and saved.")
-    #
-    #append _ascii
+os.system("FbXFormatConverter.exe -c \"Example Files\KaiborgFaceMorphBinary.fbx\" -o \"Example Files\KaiborgFaceMorphAscii.fbx\" -ascii")
 
 with open('Example Files\KaiborgFaceMorphAscii.fbx', 'r') as file:
     data = file.read()
