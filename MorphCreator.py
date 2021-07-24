@@ -70,9 +70,9 @@ class MorphCreator:
 
             for i, vertex in enumerate(shapeKey.Vertices):
                 if i in {len(shapeKey.Vertices) - 1}:
-                    morphVectors += "Vector3D(" + str(vertex.X) + "f," + str(vertex.Y) + "f," + str(vertex.Z) + "f)};\n"
+                    morphVectors += "Vector3D(" + f'{vertex.X:.4f}' + "f," + f'{vertex.Y:.4f}'+ "f," + f'{vertex.Z:.4f}' + "f)};\n"
                 else:
-                    morphVectors += "Vector3D(" + str(vertex.X) + "f," + str(vertex.Y) + "f," + str(vertex.Z) + "f),"
+                    morphVectors += "Vector3D(" + f'{vertex.X:.4f}' + "f," + f'{vertex.Y:.4f}' + "f," + f'{vertex.Z:.4f}' + "f),"
 
         morphVectors += "\n"
 
@@ -92,12 +92,12 @@ class MorphCreator:
     def GetRotationPositionOffset(self):
         #Quaternion rotation
         rotationPosition = "\tQuaternion offsetRotation = Rotation(EulerAngles(Vector3D("
-        rotationPosition += str(self.morphObj.baseMesh.ObjectParams.Rotation.X) + "," + str(self.morphObj.baseMesh.ObjectParams.Rotation.Y) + "," + str(self.morphObj.baseMesh.ObjectParams.Rotation.Z)
+        rotationPosition += f'{self.morphObj.baseMesh.ObjectParams.Rotation.X:.4f}' + "," + f'{self.morphObj.baseMesh.ObjectParams.Rotation.Y:.4f}' + "," + f'{self.morphObj.baseMesh.ObjectParams.Rotation.Z:.4f}'
         rotationPosition += "), EulerConstants::EulerOrderXYZR)).GetQuaternion();\n"
 
         #Vector position
         rotationPosition += "\tVector3D offsetPosition = Vector3D("
-        rotationPosition += str(self.morphObj.baseMesh.ObjectParams.Position.X) + "," + str(self.morphObj.baseMesh.ObjectParams.Position.Y) + "," + str(self.morphObj.baseMesh.ObjectParams.Position.Z)
+        rotationPosition += f'{self.morphObj.baseMesh.ObjectParams.Position.X:.4f}' + "," + f'{self.morphObj.baseMesh.ObjectParams.Position.Y:.4f}' + "," + f'{self.morphObj.baseMesh.ObjectParams.Position.Z:.4f}'
         rotationPosition += ");\n\n"
 
         return rotationPosition
