@@ -111,19 +111,29 @@ def GetBaseMesh(dataString, scale):
     
     baseMesh = Object3D()
 
-    for line in lines:
+    for i, line in enumerate(lines):
         if line.find("Objects:  {") >= 0:
             vertexCount = int(lines[lineNumber + 2].split(": *")[1].split(" ")[0])
-            verticesXYZ = [float(i) for i in lines[lineNumber + 3].split(": ")[1].split(",")]
-            
-            polygonVertexIndex = int(lines[lineNumber + 5].split(": *")[1].split(" ")[0])
-            triangleVertexIndex = [int(i) for i in lines[lineNumber + 6].split(": ")[1].split(",")]
+            verticesXYZ = [float(i) for i in filter(None, lines[lineNumber + 3].split(": ")[1].split(","))]
+
+            polygonVertexIndex = 0
+            triangleVertexIndex = []
+            offset = 5
+
+            #variable amount of spacing based on the amount of vertices given
+            for l in range(5, 15):
+                if lines[i + l].find("PolygonVertexIndex:") >= 0:
+                    offset = l
+                    break
+
+            polygonVertexIndex = int(lines[lineNumber + offset].split(": *")[1].split(" ")[0])
+            triangleVertexIndex = [int(i) for i in filter(None, lines[lineNumber + offset + 1].split(": ")[1].split(","))]
             
             vertices = []
             triangles = []
             triangleCount = 0
 
-            for i in range(0, vertexCount, 3):
+            for i in range(0, int(len(triangleVertexIndex) / 3), 3):
                 vertex = Vector3D()
 
                 vertex.X = verticesXYZ[i] * scale
@@ -183,10 +193,10 @@ def GetMeshShapeKeys(dataString, scale):
             
             name = lines[lineNumber].split("\"Geometry::")[1].split("\"")[0]
             indexCount = int(lines[lineNumber + 2].split(": *")[1].split(" ")[0])
-            indexes = [int(i) for i in lines[lineNumber + 3].split(": ")[1].split(",")]
+            indexes = [int(i) for i in filter(None, lines[lineNumber + 3].split(": ")[1].split(","))]
             
             vertexCount = int(lines[lineNumber + 5].split(": *")[1].split(" ")[0])
-            verticesXYZ = [float(i) for i in lines[lineNumber + 6].split(": ")[1].split(",")]
+            verticesXYZ = [float(i) for i in filter(None, lines[lineNumber + 6].split(": ")[1].split(","))]
             
             vertices = []
 

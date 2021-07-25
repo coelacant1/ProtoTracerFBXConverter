@@ -110,7 +110,7 @@ class MorphCreator:
         publicFunctions += "\tvoid SetMorphWeight(Morphs morph, float weight){\n"
         publicFunctions += "\t\tmorphs[morph].Weight;\n\t}\n\n"
 
-        publicFunctions += "\float* GetMorphWeight(Morphs morph){\n"
+        publicFunctions += "\tfloat* GetMorphWeight(Morphs morph){\n"
         publicFunctions += "\t\treturn &morphs[morph].Weight;\n\t}\n\n"
 
         publicFunctions += "\tvoid Update(){\n"

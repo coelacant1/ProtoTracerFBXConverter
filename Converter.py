@@ -7,15 +7,22 @@ from FBXReader import *
 from MorphCreator import *
 import os
 
-os.system("FbXFormatConverter.exe -c \"Example Files\KaiborgFaceMorphBinary.fbx\" -o \"Example Files\KaiborgFaceMorphAscii.fbx\" -ascii")
+origFileName = "Example Files\ProtoDRMorphBinary.fbx"
+newFileName = "Example Files\ProtoDRMorphAscii.fbx"
+outputCPPName = "Output\ProtoDRMorph.h"
 
-with open('Example Files\KaiborgFaceMorphAscii.fbx', 'r') as file:
+os.system("FbXFormatConverter.exe -c \"" + origFileName + "\" -o \"" + newFileName + "\" -ascii")
+
+with open(newFileName, 'r') as file:
     data = file.read()
 
-    name = "KaiborgV1"
+    name = "ProtoDR"
     morphCreator = MorphCreator(GetMorphObject(data, name, 10.0)) #default is centimeters, prototracer uses millimeters
 
     morphCodeString = morphCreator.GenerateMorphCode(name).expandtabs(4)
 
-    print(morphCodeString)
+    #print(morphCodeString)
+    f = open(outputCPPName, "w")
+    f.write(morphCodeString)
+    f.close()
     
