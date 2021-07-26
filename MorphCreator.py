@@ -29,6 +29,7 @@ class MorphCreator:
                 basisVertices += "Vector3D(" + f'{vertex.X:.4f}' + "f," + f'{vertex.Y:.4f}' + "f," + f'{vertex.Z:.4f}' + "f)};\n" #last entry
             else:
                 basisVertices += "Vector3D(" + f'{vertex.X:.4f}' + "f," + f'{vertex.Y:.4f}' + "f," + f'{vertex.Z:.4f}' + "f),"
+                print(f'{vertex.X:.4f}' + "," + f'{vertex.Y:.4f}' + "," + f'{vertex.Z:.4f}'  + ",")
 
         return basisVertices
 

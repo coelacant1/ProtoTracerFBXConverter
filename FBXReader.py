@@ -112,28 +112,49 @@ def GetBaseMesh(dataString, scale):
     baseMesh = Object3D()
 
     for i, line in enumerate(lines):
-        if line.find("Objects:  {") >= 0:
-            vertexCount = int(lines[lineNumber + 2].split(": *")[1].split(" ")[0])
-            verticesXYZ = [float(i) for i in filter(None, lines[lineNumber + 3].split(": ")[1].split(","))]
+        if line.find("\"Geometry::Mesh\", \"Mesh\" {") >= 0:
+            vertexString = ""
+
+            for l in range(2, 20):
+                if lines[i + l].find("}") >= 0:
+                    break
+                else:
+                    vertexString += lines[i + l]
+                    print(lines[i + l])
+
+            vertexString.replace("\n", "")
+            
+            vertexCount = int(lines[lineNumber + 1].split(": *")[1].split(" ")[0])
+            verticesXYZ = [float(i) for i in filter(None, vertexString.split(": ")[1].split(","))]
 
             polygonVertexIndex = 0
             triangleVertexIndex = []
-            offset = 5
+            offset = 4
 
             #variable amount of spacing based on the amount of vertices given
-            for l in range(5, 15):
+            for l in range(4, 15):
                 if lines[i + l].find("PolygonVertexIndex:") >= 0:
                     offset = l
                     break
+            
+            triangleVertexString = ""
+                
+            for l in range(offset + 1, offset + 10):
+                if lines[i + l].find("}") >= 0:
+                    break
+                else:
+                    triangleVertexString += lines[i + l]
+
+            triangleVertexString.replace("\n", "")
 
             polygonVertexIndex = int(lines[lineNumber + offset].split(": *")[1].split(" ")[0])
-            triangleVertexIndex = [int(i) for i in filter(None, lines[lineNumber + offset + 1].split(": ")[1].split(","))]
+            triangleVertexIndex = [int(i) for i in filter(None, triangleVertexString.split(": ")[1].split(","))]
             
             vertices = []
             triangles = []
             triangleCount = 0
 
-            for i in range(0, int(len(triangleVertexIndex) / 3), 3):
+            for i in range(0, int(vertexCount), 3):
                 vertex = Vector3D()
 
                 vertex.X = verticesXYZ[i] * scale
