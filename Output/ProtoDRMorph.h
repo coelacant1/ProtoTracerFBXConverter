@@ -174,8 +174,14 @@ public:
         morphs[morph].Weight;
     }
 
-    float* GetMorphWeight(Morphs morph){
+    float* GetMorphWeightReference(Morphs morph){
         return &morphs[morph].Weight;
+    }
+
+    void Reset(){
+        for(int i = 0; i < morphCount; i++){
+            morphs[i].Weight = 0.0f;
+        }
     }
 
     void Update(){

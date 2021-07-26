@@ -108,10 +108,16 @@ class MorphCreator:
         publicFunctions += "\tObject3D* GetObject(){\n\t\treturn &basisObj;\n\t}\n\n"
 
         publicFunctions += "\tvoid SetMorphWeight(Morphs morph, float weight){\n"
-        publicFunctions += "\t\tmorphs[morph].Weight;\n\t}\n\n"
+        publicFunctions += "\t\tmorphs[morph].Weight = weight;\n\t}\n\n"
 
-        publicFunctions += "\tfloat* GetMorphWeight(Morphs morph){\n"
+        publicFunctions += "\tfloat* GetMorphWeightReference(Morphs morph){\n"
         publicFunctions += "\t\treturn &morphs[morph].Weight;\n\t}\n\n"
+
+        
+        publicFunctions += "\tvoid Reset(){\n"
+        publicFunctions += "\t\tfor(int i = 0; i < morphCount; i++){\n"
+        publicFunctions += "\t\t\tmorphs[i].Weight = 0.0f;\n"
+        publicFunctions += "\t\t}\n\t}\n\n"
 
         publicFunctions += "\tvoid Update(){\n"
         publicFunctions += "\t\tbasisObj.ResetVertices();\n\n"
