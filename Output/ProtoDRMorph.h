@@ -160,8 +160,8 @@ private:
         Morph(6, AngryEyeBrowIndexes, AngryEyeBrowVectors)
     };
 
-    Quaternion offsetRotation = Rotation(EulerAngles(Vector3D(100.0000,100.0000,100.0000), EulerConstants::EulerOrderXYZR)).GetQuaternion();
-    Vector3D offsetPosition = Vector3D(-900.0001,0.0000,0.0000);
+    Quaternion offsetRotation = Rotation(EulerAngles(Vector3D(0.0000f,180.0000f,-0.0000f), EulerConstants::EulerOrderXYZR)).GetQuaternion();
+    Vector3D offsetPosition = Vector3D(0.0000f,0.0000f,0.0000f);
 
 public:
     ProtoDR(){}

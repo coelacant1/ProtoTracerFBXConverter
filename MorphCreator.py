@@ -93,13 +93,13 @@ class MorphCreator:
     def GetRotationPositionOffset(self):
         #Quaternion rotation
         rotationPosition = "\tQuaternion offsetRotation = Rotation(EulerAngles(Vector3D("
-        rotationPosition += f'{self.morphObj.baseMesh.ObjectParams.Rotation.X:.4f}' + "," + f'{self.morphObj.baseMesh.ObjectParams.Rotation.Y:.4f}' + "," + f'{self.morphObj.baseMesh.ObjectParams.Rotation.Z:.4f}'
-        rotationPosition += "), EulerConstants::EulerOrderXYZR)).GetQuaternion();\n"
+        rotationPosition += f'{self.morphObj.baseMesh.ObjectParams.Rotation.X:.4f}' + "f," + f'{self.morphObj.baseMesh.ObjectParams.Rotation.Y:.4f}' + "f," + f'{self.morphObj.baseMesh.ObjectParams.Rotation.Z:.4f}'
+        rotationPosition += "f), EulerConstants::EulerOrderXYZR)).GetQuaternion();\n"
 
         #Vector position
         rotationPosition += "\tVector3D offsetPosition = Vector3D("
-        rotationPosition += f'{self.morphObj.baseMesh.ObjectParams.Position.X:.4f}' + "," + f'{self.morphObj.baseMesh.ObjectParams.Position.Y:.4f}' + "," + f'{self.morphObj.baseMesh.ObjectParams.Position.Z:.4f}'
-        rotationPosition += ");\n\n"
+        rotationPosition += f'{self.morphObj.baseMesh.ObjectParams.Position.X:.4f}' + "f," + f'{self.morphObj.baseMesh.ObjectParams.Position.Y:.4f}' + "f," + f'{self.morphObj.baseMesh.ObjectParams.Position.Z:.4f}'
+        rotationPosition += "f);\n\n"
 
         return rotationPosition
 

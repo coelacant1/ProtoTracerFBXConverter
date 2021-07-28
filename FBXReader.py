@@ -257,26 +257,22 @@ def GetMeshShapeKeys(dataString, scale):
 #        P: "Lcl Rotation", "Lcl Rotation", "", "A",9.33466682838942e-06,-0,0
 #    }
 def GetMeshParameters(dataString, scale):
-    lineNumber = 0
     lines = dataString.splitlines()
 
     objParam = ObjectParameters()
 
     for line in lines:
-        if line.find("Model: ") >= 0:
-            splitTranslation = lines[lineNumber + 5].split(",")
-            splitRotation    = lines[lineNumber + 6].split(",")
-            
+        if line.find("Lcl Translation") >= 0:
+            splitTranslation = line.split(",")
             objParam.Position.X = float(splitTranslation[4]) * scale
             objParam.Position.Y = float(splitTranslation[5]) * scale
             objParam.Position.Z = float(splitTranslation[6]) * scale
+            
+        if line.find("Lcl Rotation") >= 0:
+            splitRotation = line.split(",")
             objParam.Rotation.X = float(splitRotation[4])
             objParam.Rotation.Y = float(splitRotation[5])
             objParam.Rotation.Z = float(splitRotation[6])
-
-            break
-
-        lineNumber += 1
 
     print("Object Position: [", objParam.Position.X, ", ", objParam.Position.Y, ", ", objParam.Position.Z, "]")
     print("Object Rotation: [", objParam.Rotation.X, ", ", objParam.Rotation.Y, ", ", objParam.Rotation.Z, "]")
