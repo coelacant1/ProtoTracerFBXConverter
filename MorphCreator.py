@@ -94,7 +94,7 @@ class MorphCreator:
         #Quaternion rotation
         rotationPosition = "\tQuaternion offsetRotation = Rotation(EulerAngles(Vector3D("
         rotationPosition += f'{self.morphObj.baseMesh.ObjectParams.Rotation.X:.4f}' + "f," + f'{self.morphObj.baseMesh.ObjectParams.Rotation.Y:.4f}' + "f," + f'{self.morphObj.baseMesh.ObjectParams.Rotation.Z:.4f}'
-        rotationPosition += "f), EulerConstants::EulerOrderXYZR)).GetQuaternion();\n"
+        rotationPosition += "f), EulerConstants::EulerOrderXYZS)).GetQuaternion();\n"
 
         #Vector position
         rotationPosition += "\tVector3D offsetPosition = Vector3D("
