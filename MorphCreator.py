@@ -9,7 +9,7 @@ class MorphCreator:
         self.morphObj = morphObj
 
     def GetHeader(self, name):
-        return "#pragma once\n\n#include \"Arduino.h\"\n#include \"..\Math\Rotation.h\"\n#include \"Morph.h\"\n\nclass " + name + "{\npublic:\n"
+        return "#pragma once\n\n#include \"Arduino.h\"\n#include \"..\Math\Rotation.h\"\n#include \"Morph.h\"\n\n#include \"..\Math\VertexGroup.h\"\n\nclass " + name + "{\npublic:\n"
 
     def GetMorphEnums(self):
         enums = "\tenum Morphs {\n"
@@ -34,13 +34,13 @@ class MorphCreator:
         return basisVertices
 
     def GetBasisIndexes(self):
-        basisIndexes = "\tVector3D basisIndexes[" + str(self.morphObj.baseMesh.TriangleCount) + "] = {"
+        basisIndexes = "\tVertexGroup basisIndexes[" + str(self.morphObj.baseMesh.TriangleCount) + "] = {"
 
         for i, index in enumerate(self.morphObj.baseMesh.Triangles):
             if i in {len(self.morphObj.baseMesh.Triangles) - 1}:
-                basisIndexes += "Vector3D(" + str(index.A) + "," + str(index.B) + "," + str(index.C) + ")};\n"
+                basisIndexes += "VertexGroup(" + str(index.A) + "," + str(index.B) + "," + str(index.C) + ")};\n"
             else:
-                basisIndexes += "Vector3D(" + str(index.A) + "," + str(index.B) + "," + str(index.C) + "),"
+                basisIndexes += "VertexGroup(" + str(index.A) + "," + str(index.B) + "," + str(index.C) + "),"
 
         return basisIndexes
 

@@ -203,21 +203,31 @@ def GetBaseMesh(dataString, scale):
 #       a: 2.37597942352295,-2.99088287353516,0,2.52437686920166,-3.26673984527588,0,3.14269971847534,-2.70812797546387,0,1.77199268341064,-3.13370132446289,0,2.21885299682617,-2.68759822845459,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0,-0.354424476623535,-1.27592945098877,0
 #   }
 def GetMeshShapeKeys(dataString, scale):
-    lineNumber = 0
     lines = dataString.splitlines()
     
     shapeKeys = []
 
-    for line in lines:
+    for i, line in enumerate(lines):
         if line.find("\"Shape\" {") >= 0:
             shapeKey = ShapeKey()
             
-            name = lines[lineNumber].split("\"Geometry::")[1].split("\"")[0]
-            indexCount = int(lines[lineNumber + 2].split(": *")[1].split(" ")[0])
-            indexes = [int(i) for i in filter(None, lines[lineNumber + 3].split(": ")[1].split(","))]
+            name = lines[i].split("\"Geometry::")[1].split("\"")[0]
+            indexCount = int(lines[i + 2].split(": *")[1].split(" ")[0])
+            indexes = [int(i) for i in filter(None, lines[i + 3].split(": ")[1].split(","))]
             
-            vertexCount = int(lines[lineNumber + 5].split(": *")[1].split(" ")[0])
-            verticesXYZ = [float(i) for i in filter(None, lines[lineNumber + 6].split(": ")[1].split(","))]
+            vertexCount = int(lines[i + 5].split(": *")[1].split(" ")[0])
+
+            offset = 6
+            vertexString = ""
+                
+            for l in range(offset, offset + 10):
+                if lines[i + l].find("}") >= 0:
+                    break
+                else:
+                    vertexString += lines[i + l]
+
+
+            verticesXYZ = [float(i) for i in filter(None, vertexString.split(": ")[1].split(","))]
             
             vertices = []
 
@@ -241,8 +251,6 @@ def GetMeshShapeKeys(dataString, scale):
             shapeKeys.append(shapeKey)
 
             print("Created shape key ", name, " with ", indexCount, " modified indices and ", vertexCount, "modified vertex values.")
-        
-        lineNumber += 1
     
     print("Created ", len(shapeKeys), " shape keys.")
 
