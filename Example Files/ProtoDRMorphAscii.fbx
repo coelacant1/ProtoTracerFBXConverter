@@ -9,10 +9,10 @@ FBXHeaderExtension:  {
 		Year: 2021
 		Month: 7
 		Day: 31
-		Hour: 15
-		Minute: 15
-		Second: 36
-		Millisecond: 953
+		Hour: 18
+		Minute: 47
+		Second: 23
+		Millisecond: 884
 	}
 	Creator: "FBX SDK/FBX Plugins version 2020.0.1"
 	OtherFlags:  {
@@ -78,7 +78,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 2564254988256, "Scene", "Scene" {
+	Document: 2213388154416, "Scene", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", ""
@@ -202,7 +202,7 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 2564255290576, "Geometry::Mesh", "Mesh" {
+	Geometry: 2213388453040, "Geometry::Mesh", "Mesh" {
 		Vertices: *384 {
 			a: -18.028299331665,2.21568059921265,-6.5,-15.2153968811035,4.31343841552734,-6.5,-17.1224498748779,1.3098304271698,-6.5,-14.8816623687744,3.16920685768127,-6.5,-10.5431175231934,1.59588837623596,-6.5,-10.6384706497192,2.59709095954895,-6.5,-5.91851425170898,4.07505702972412,-6.5,-6.34760141372681,4.93323087692261,-6.5,-4.53590106964111,7.17401790618896,-6.5,-4.18793058395386,5.63164901733398,-6.5,-3.21757745742798,5.67575597763062,-6.5,-2.34279036521912,7.22169399261475,-6.5,-1.627645611763,4.83787822723389,-6.5,-2.19976139068604,4.1227331161499,-6.5,-10.0982627868652,8.05753135681152,-6.5,-8.30233097076416,6.31584405899048,-6.5,-8.02523612976074,8.85145664215088,-6.5,-7.58718585968018,6.60190200805664,-6.5,-7.01506996154785,6.84028339385986,-6.5,-4.917311668396,8.60430717468262,-6.5,-7.31952476501465,9.20431232452393,-6.5,-5.99631595611572,9.7335958480835,-6.5,-3.4393458366394,8.84268951416016,-6.5,-4.24984312057495,8.89036560058594,-6.5,-5.02596282958984,10.0423450469971,-6.5,-3.12936353683472,10.7480564117432,-6.5,-11.8780546188354,12.227707862854,-6.5,-12.5455226898193,9.70086288452148,-6.5,-10.1140308380127,10.7974185943604,-6.5,-11.2582626342773,14.1347608566284,-6.5,-7.77789115905762,11.7986211776733,-6.5,-9.4807653427124,15.3792867660522,-6.5,-5.96619081497192,12.5614423751831,-6.5,-7.49183320999146,16.7092819213867,-6.5,-5.29872226715088,15.2789926528931,-6.5,-3.01025891304016,13.8487024307251,-6.5,-12.9269332885742,11.3695344924927,-6.5,-13.3083438873291,12.4184131622314,-6.5,-11.973406791687,14.6115236282349,-6.5,-12.4501705169678,15.4220209121704,-6.5,-9.78029632568359,17.3767509460449,-6.5,-8.1593017578125,17.1383686065674,-6.5,-19.7923240661621,5.83908081054688,-6.5,-19.0771789550781,8.60430717468262,-6.5,-18.9341506958008,6.45887327194214,-6.5,-18.5527400970459,7.93683910369873,-6.5,-17.3131542205811,8.22289657592773,-6.5,-16.6933631896973,9.12874698638916,-6.5,-0.483413904905319,13.3242635726929,-6.5,-0.102003335952759,14.0870847702026,-6.5,-5.82316160202026,20.285005569458,-6.5,-2.10440874099731,19.6652145385742,-6.5,
 6.19127082824707,24.6712284088135,-6.5,9.62396621704102,28.4376564025879,-6.5,-1.00785338878632,19.2838039398193,-6.5,0.279407232999802,14.7545528411865,-6.5,2.09110736846924,16.6616058349609,-6.5,2.18646001815796,19.0930976867676,-6.5,3.23533916473389,20.0943012237549,-6.5,5.33309745788574,23.0979099273682,-6.5,1.56666791439056,13.228910446167,-6.5,7.43085527420044,18.6640110015869,-6.5,4.85633420944214,14.5161714553833,-6.5,8.47973442077637,17.2337207794189,-6.5,15.1544189453125,17.6628093719482,-6.5,18.682466506958,18.5209827423096,-6.5,6.71571063995361,14.7545528411865,-6.5,9.00417423248291,16.5185775756836,-6.5,10.7205219268799,14.7068767547607,-6.5,13.4857482910156,16.7092819213867,-6.5,1.90040218830109,12.7044706344604,-6.5,5.2854208946228,13.9917316436768,-6.5,12.9613084793091,12.4660892486572,-6.5,11.4356660842896,13.944055557251,-6.5,15.39280128479,17.1383686065674,-6.5,18.825496673584,18.0442180633545,-6.5,0.231730908155441,10.8450946807861,-6.5,1.23293364048004,9.6531867980957,-6.5,1.56666791439056,4.02738046646118,-6.5,0.231730908155441,1.35750675201416,-6.5,3.09231019020081,3.7413227558136,-6.5,4.85633420944214,2.59709095954895,-6.5,1.0422283411026,11.2741813659668,-6.5,4.8086576461792,11.0357999801636,-6.5,2.09110736846924,9.93924427032471,-6.5,3.56907343864441,9.46248149871826,-6.5,4.14118909835815,4.64717292785645,-6.5,5.23774480819702,3.55061745643616,-6.5,5.85753679275513,11.0834760665894,-6.5,7.04944467544556,10.1776256561279,-6.5,6.23894739151001,3.31223583221436,-6.5,7.76458978652954,5.60069942474365,-6.5,9.00417423248291,5.31464147567749,-6.5,10.2914342880249,4.59949636459351,-6.5,7.00176858901978,11.3218574523926,-6.5,10.5298166275024,11.0834760665894,-6.5,7.95529508590698,10.4636840820313,-6.5,9.38558483123779,9.93924427032471,-6.5,10.0530529022217,5.83908081054688,-6.5,11.2449607849121,5.07625961303711,-6.5,11.2449607849121,11.0834760665894,-6.5,12.4368686676025,10.3206548690796,-6.5,12.341516494751,5.17161226272583,-6.5,14.0578641891479,7.55542850494385,-6.5,16.0125923156738,7.46007585525513,-6.5,
@@ -234,7 +234,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 2564255299632, "Geometry::HideSecondEye", "Shape" {
+	Geometry: 2213388453824, "Geometry::HideSecondEye", "Shape" {
 		Version: 100
 		Indexes: *6 {
 			a: 106,107,108,109,110,111
@@ -246,7 +246,7 @@ Objects:  {
 			a: 0,0,0,0,0,5.96046447753906e-08,1.15344518240511e-05,-0.000215265264624236,-2.32378284392709e-08,-0.000813026923754944,-0.000416512991560794,-4.17041689626529e-07,0.000859821088715627,-0.000444547896385611,-4.68190411107017e-07,5.37485277618543e-07,0,5.96046447753906e-08
 		} 
 	}
-	Geometry: 2564255309296, "Geometry::HideBlush", "Shape" {
+	Geometry: 2213388456992, "Geometry::HideBlush", "Shape" {
 		Version: 100
 		Indexes: *12 {
 			a: 14,15,16,17,18,19,20,21,22,23,24,25
@@ -258,7 +258,7 @@ Objects:  {
 			a: 0,0,0,0,0,0,0,0,0,0,0,5.96046447753906e-08,1.73514237644667e-07,0,0,1.0866026656231e-07,0,5.96046447753906e-08,1.14007860929632e-07,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564255308720, "Geometry::TopFinOuterThin", "Shape" {
+	Geometry: 2213388454976, "Geometry::TopFinOuterThin", "Shape" {
 		Version: 100
 		Indexes: *3 {
 			a: 49,51,52
@@ -270,7 +270,7 @@ Objects:  {
 			a: -1.67982623366925e-08,0,0,-4.5076916421749e-08,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564255311888, "Geometry::TopFinInnerThin", "Shape" {
+	Geometry: 2213388456416, "Geometry::TopFinInnerThin", "Shape" {
 		Version: 100
 		Indexes: *3 {
 			a: 56,57,58
@@ -282,7 +282,7 @@ Objects:  {
 			a: -1.11834104643549e-07,0,0,0,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564255312176, "Geometry::MidFinTopThin", "Shape" {
+	Geometry: 2213388456704, "Geometry::MidFinTopThin", "Shape" {
 		Version: 100
 		Indexes: *3 {
 			a: 62,63,64
@@ -294,7 +294,7 @@ Objects:  {
 			a: 0,0,0,0,0,0,0,0,5.96046447753906e-08
 		} 
 	}
-	Geometry: 2564255309008, "Geometry::MidFinBotThin", "Shape" {
+	Geometry: 2213388453536, "Geometry::MidFinBotThin", "Shape" {
 		Version: 100
 		Indexes: *3 {
 			a: 71,73,74
@@ -306,7 +306,7 @@ Objects:  {
 			a: 0,0,0,0,0,0,2.33972514251946e-07,0,0
 		} 
 	}
-	Geometry: 2564255311600, "Geometry::MidFinMidBigger", "Shape" {
+	Geometry: 2213388455840, "Geometry::MidFinMidBigger", "Shape" {
 		Version: 100
 		Indexes: *4 {
 			a: 66,67,68,69
@@ -318,7 +318,7 @@ Objects:  {
 			a: 0,0,0,0,0,0,0,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564255309584, "Geometry::BotFinLR1Thin", "Shape" {
+	Geometry: 2213388455264, "Geometry::BotFinLR1Thin", "Shape" {
 		Version: 100
 		Indexes: *3 {
 			a: 77,78,80
@@ -330,7 +330,7 @@ Objects:  {
 			a: 3.64360062121705e-07,0,0,-1.12119771245034e-08,0,0,-1.7117161021929e-08,0,0
 		} 
 	}
-	Geometry: 2564255309872, "Geometry::BotFinLR2Thin", "Shape" {
+	Geometry: 2213388454688, "Geometry::BotFinLR2Thin", "Shape" {
 		Version: 100
 		Indexes: *3 {
 			a: 84,85,86
@@ -342,7 +342,7 @@ Objects:  {
 			a: 1.45129291695412e-07,0,0,-3.0555199259652e-07,0,0,-4.99037504653188e-08,0,0
 		} 
 	}
-	Geometry: 2564255311024, "Geometry::BotFinLR3Thin", "Shape" {
+	Geometry: 2213388454112, "Geometry::BotFinLR3Thin", "Shape" {
 		Version: 100
 		Indexes: *3 {
 			a: 89,91,92
@@ -354,7 +354,7 @@ Objects:  {
 			a: -9.468098483012e-08,0,5.96046447753906e-08,6.49922924367274e-08,0,0,4.34574900509688e-08,0,0
 		} 
 	}
-	Geometry: 2564255311312, "Geometry::BotFinLR4Thin", "Shape" {
+	Geometry: 2213388454400, "Geometry::BotFinLR4Thin", "Shape" {
 		Version: 100
 		Indexes: *3 {
 			a: 96,97,98
@@ -366,7 +366,7 @@ Objects:  {
 			a: 0,0,0,0,0,0,5.13559598402935e-07,0,0
 		} 
 	}
-	Geometry: 2564255310448, "Geometry::BotFinLR5Thin", "Shape" {
+	Geometry: 2213388455552, "Geometry::BotFinLR5Thin", "Shape" {
 		Version: 100
 		Indexes: *3 {
 			a: 101,103,104
@@ -378,7 +378,7 @@ Objects:  {
 			a: 4.88058446990181e-07,0,0,-5.13279410085943e-08,0,0,-2.13626716316639e-08,0,0
 		} 
 	}
-	Geometry: 2564255310160, "Geometry::TopFinInnerCloseGap", "Shape" {
+	Geometry: 2213388456128, "Geometry::TopFinInnerCloseGap", "Shape" {
 		Version: 100
 		Indexes: *3 {
 			a: 54,55,59
@@ -390,7 +390,7 @@ Objects:  {
 			a: -5.76724161760467e-08,0,5.96046447753906e-08,-1.78916863546874e-07,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564255310736, "Geometry::ShockedMouth", "Shape" {
+	Geometry: 2213415357168, "Geometry::ShockedMouth", "Shape" {
 		Version: 100
 		Indexes: *12 {
 			a: 1,3,4,5,6,7,8,9,10,11,12,13
@@ -402,7 +402,7 @@ Objects:  {
 			a: -3.90645098491404e-08,0,0,0,0,0,1.77984091465078e-07,0,0,2.38392161122647e-07,0,0,1.97960986270118e-07,0,0,1.76948475427707e-07,0,5.96046447753906e-08,0,0,0,0,0,0,0,0,0,0,0,5.96046447753906e-08,0,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564282058640, "Geometry::HappyMouth", "Shape" {
+	Geometry: 2213415354864, "Geometry::HappyMouth", "Shape" {
 		Version: 100
 		Indexes: *14 {
 			a: 0,1,2,3,4,5,6,7,8,9,10,11,12,13
@@ -414,7 +414,7 @@ Objects:  {
 			a: -4.28779600269991e-07,0,0,-3.90645098491404e-08,0,0,-3.48244981296375e-07,0,0,0,0,0,1.77984091465078e-07,0,0,2.38392161122647e-07,0,0,1.97960986270118e-07,0,0,1.76948475427707e-07,0,5.96046447753906e-08,0,0,0,0,0,0,0,0,0,0,0,5.96046447753906e-08,0,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564282063824, "Geometry::OwOMouth", "Shape" {
+	Geometry: 2213415355728, "Geometry::OwOMouth", "Shape" {
 		Version: 100
 		Indexes: *14 {
 			a: 0,1,2,3,4,5,6,7,8,9,10,11,12,13
@@ -426,7 +426,7 @@ Objects:  {
 			a: -4.28779600269991e-07,0,0,-3.90645098491404e-08,0,0,-3.48244981296375e-07,0,0,0,0,0,1.77984091465078e-07,0,0,2.38392161122647e-07,0,0,1.97960986270118e-07,0,0,1.76948475427707e-07,0,5.96046447753906e-08,0,0,0,0,0,0,0,0,0,0,0,5.96046447753906e-08,0,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564282065840, "Geometry::UpsetMouth", "Shape" {
+	Geometry: 2213415358320, "Geometry::UpsetMouth", "Shape" {
 		Version: 100
 		Indexes: *10 {
 			a: 4,5,6,7,8,9,10,11,12,13
@@ -438,7 +438,7 @@ Objects:  {
 			a: 1.77984091465078e-07,0,0,2.38392161122647e-07,0,0,1.97960986270118e-07,0,0,1.76948475427707e-07,0,5.96046447753906e-08,0,0,0,0,0,0,0,0,0,0,0,5.96046447753906e-08,0,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564282058928, "Geometry::SillyMouth", "Shape" {
+	Geometry: 2213415351120, "Geometry::SillyMouth", "Shape" {
 		Version: 100
 		Indexes: *14 {
 			a: 0,1,2,3,4,5,6,7,8,9,10,11,12,13
@@ -450,7 +450,7 @@ Objects:  {
 			a: -4.28779600269991e-07,0,0,-3.90645098491404e-08,0,0,-3.48244981296375e-07,0,0,0,0,0,1.77984091465078e-07,0,0,2.38392161122647e-07,0,0,1.97960986270118e-07,0,0,1.76948475427707e-07,0,5.96046447753906e-08,0,0,0,0,0,0,0,0,0,0,0,5.96046447753906e-08,0,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564282059792, "Geometry::FlatMouth", "Shape" {
+	Geometry: 2213415356016, "Geometry::FlatMouth", "Shape" {
 		Version: 100
 		Indexes: *12 {
 			a: 1,3,4,5,6,7,8,9,10,11,12,13
@@ -462,7 +462,7 @@ Objects:  {
 			a: -3.90645098491404e-08,0,0,0,0,0,1.77984091465078e-07,0,0,2.38392161122647e-07,0,0,1.97960986270118e-07,0,0,1.76948475427707e-07,0,5.96046447753906e-08,0,0,0,0,0,0,0,0,0,0,0,5.96046447753906e-08,0,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564282064688, "Geometry::OpenToothMouth", "Shape" {
+	Geometry: 2213415355152, "Geometry::OpenToothMouth", "Shape" {
 		Version: 100
 		Indexes: *14 {
 			a: 0,1,2,3,4,5,6,7,8,9,10,11,12,13
@@ -474,7 +474,7 @@ Objects:  {
 			a: -4.28779600269991e-07,0,0,-3.90645098491404e-08,0,0,-3.48244981296375e-07,0,0,0,0,0,1.77984091465078e-07,0,0,2.38392161122647e-07,0,0,1.97960986270118e-07,0,0,1.76948475427707e-07,0,5.96046447753906e-08,0,0,0,0,0,0,0,0,0,0,0,5.96046447753906e-08,0,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564282064976, "Geometry::SadMouth", "Shape" {
+	Geometry: 2213415353424, "Geometry::SadMouth", "Shape" {
 		Version: 100
 		Indexes: *12 {
 			a: 1,3,4,5,6,7,8,9,10,11,12,13
@@ -486,7 +486,7 @@ Objects:  {
 			a: -3.90645098491404e-08,0,0,0,0,0,1.77984091465078e-07,0,0,2.38392161122647e-07,0,0,1.97960986270118e-07,0,0,1.76948475427707e-07,0,5.96046447753906e-08,0,0,0,0,0,0,0,0,0,0,0,5.96046447753906e-08,0,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564282066128, "Geometry::PogMouth", "Shape" {
+	Geometry: 2213415351408, "Geometry::PogMouth", "Shape" {
 		Version: 100
 		Indexes: *13 {
 			a: 0,1,3,4,5,6,7,8,9,10,11,12,13
@@ -498,7 +498,7 @@ Objects:  {
 			a: -4.28779600269991e-07,0,0,-3.90645098491404e-08,0,0,0,0,0,1.77984091465078e-07,0,0,2.38392161122647e-07,0,0,1.97960986270118e-07,0,0,1.76948475427707e-07,0,5.96046447753906e-08,0,0,0,0,0,0,0,0,0,0,0,5.96046447753906e-08,0,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564282061808, "Geometry::DerpyMouth", "Shape" {
+	Geometry: 2213415354576, "Geometry::DerpyMouth", "Shape" {
 		Version: 100
 		Indexes: *12 {
 			a: 1,3,4,5,6,7,8,9,10,11,12,13
@@ -510,7 +510,7 @@ Objects:  {
 			a: -3.90645098491404e-08,0,0,0,0,0,1.77984091465078e-07,0,0,2.38392161122647e-07,0,0,1.97960986270118e-07,0,0,1.76948475427707e-07,0,5.96046447753906e-08,0,0,0,0,0,0,0,0,0,0,0,5.96046447753906e-08,0,0,0,0,0,0
 		} 
 	}
-	Geometry: 2564282065552, "Geometry::SkinnyEye", "Shape" {
+	Geometry: 2213415353136, "Geometry::SkinnyEye", "Shape" {
 		Version: 100
 		Indexes: *14 {
 			a: 26,27,28,29,30,31,32,33,34,35,124,125,126,127
@@ -522,7 +522,7 @@ Objects:  {
 			a: 1.50724943637215e-07,0,0,-3.52423910499056e-07,0,0,-4.38201013253092e-08,0,5.96046447753906e-08,1.15879288387077e-07,0,0,0,0,0,0,0,0,-2.64950532624653e-08,0,0,-1.78962693553331e-07,0,0,-2.27588458301398e-07,0,0,2.65881226368947e-07,0,0,-1.86461202034138e-09,0,0,-1.59674215183259e-07,0,0,-3.05678260481557e-09,0,5.96046447753906e-08,1.4580149354515e-07,0,5.96046447753906e-08
 		} 
 	}
-	Geometry: 2564282062096, "Geometry::SadEye", "Shape" {
+	Geometry: 2213415351696, "Geometry::SadEye", "Shape" {
 		Version: 100
 		Indexes: *5 {
 			a: 26,29,31,33,34
@@ -534,7 +534,7 @@ Objects:  {
 			a: 1.50724943637215e-07,0,0,1.15879288387077e-07,0,0,0,0,0,-1.78962693553331e-07,0,0,-2.27588458301398e-07,0,0
 		} 
 	}
-	Geometry: 2564282061232, "Geometry::CircleEye", "Shape" {
+	Geometry: 2213415358896, "Geometry::CircleEye", "Shape" {
 		Version: 100
 		Indexes: *9 {
 			a: 26,27,28,30,31,32,33,34,35
@@ -546,7 +546,7 @@ Objects:  {
 			a: 1.50724943637215e-07,0,0,-3.52423910499056e-07,0,0,-4.38201013253092e-08,0,5.96046447753906e-08,0,0,0,0,0,0,-2.64950532624653e-08,0,0,-1.78962693553331e-07,0,0,-2.27588458301398e-07,0,0,2.65881226368947e-07,0,0
 		} 
 	}
-	Geometry: 2564282062384, "Geometry::HeartEye", "Shape" {
+	Geometry: 2213415351984, "Geometry::HeartEye", "Shape" {
 		Version: 100
 		Indexes: *10 {
 			a: 26,27,28,29,30,31,32,33,34,35
@@ -558,7 +558,7 @@ Objects:  {
 			a: 1.50724943637215e-07,0,0,-3.52423910499056e-07,0,0,-4.38201013253092e-08,0,5.96046447753906e-08,1.15879288387077e-07,0,0,0,0,0,0,0,0,-2.64950532624653e-08,0,0,-1.78962693553331e-07,0,0,-2.27588458301398e-07,0,0,2.65881226368947e-07,0,0
 		} 
 	}
-	Geometry: 2564282060080, "Geometry::ClosedEye", "Shape" {
+	Geometry: 2213415358608, "Geometry::ClosedEye", "Shape" {
 		Version: 100
 		Indexes: *8 {
 			a: 26,28,29,30,31,33,34,35
@@ -570,7 +570,7 @@ Objects:  {
 			a: 1.50724943637215e-07,0,0,-4.38201013253092e-08,0,5.96046447753906e-08,1.15879288387077e-07,0,0,0,0,0,0,0,0,-1.78962693553331e-07,0,0,-2.27588458301398e-07,0,0,2.65881226368947e-07,0,0
 		} 
 	}
-	Geometry: 2564282058352, "Geometry::BlushEye", "Shape" {
+	Geometry: 2213415357744, "Geometry::BlushEye", "Shape" {
 		Version: 100
 		Indexes: *9 {
 			a: 26,27,28,29,30,31,32,33,34
@@ -582,7 +582,7 @@ Objects:  {
 			a: 1.50724943637215e-07,0,0,-3.52423910499056e-07,0,0,-4.38201013253092e-08,0,5.96046447753906e-08,1.15879288387077e-07,0,0,0,0,0,0,0,0,-2.64950532624653e-08,0,0,-1.78962693553331e-07,0,0,-2.27588458301398e-07,0,0
 		} 
 	}
-	Geometry: 2564282065264, "Geometry::ClosedEyeBrow", "Shape" {
+	Geometry: 2213415358032, "Geometry::ClosedEyeBrow", "Shape" {
 		Version: 100
 		Indexes: *6 {
 			a: 36,37,38,39,40,41
@@ -594,7 +594,7 @@ Objects:  {
 			a: 4.26382683826887e-07,0,0,3.80855425419213e-07,0,0,6.02082579348462e-08,0,5.96046447753906e-08,0,0,0,3.37815635020888e-07,0,0,3.81072283062167e-07,0,0
 		} 
 	}
-	Geometry: 2564282062960, "Geometry::AngryEye", "Shape" {
+	Geometry: 2213415352848, "Geometry::AngryEye", "Shape" {
 		Version: 100
 		Indexes: *5 {
 			a: 26,29,31,33,34
@@ -606,7 +606,7 @@ Objects:  {
 			a: 1.50724943637215e-07,0,0,1.15879288387077e-07,0,0,0,0,0,-1.78962693553331e-07,0,0,-2.27588458301398e-07,0,0
 		} 
 	}
-	Geometry: 2564282060368, "Geometry::DeadEye", "Shape" {
+	Geometry: 2213415352560, "Geometry::DeadEye", "Shape" {
 		Version: 100
 		Indexes: *18 {
 			a: 26,27,28,29,30,31,32,33,34,35,112,113,114,115,124,125,126,127
@@ -618,7 +618,7 @@ Objects:  {
 			a: 1.50724943637215e-07,0,0,-3.52423910499056e-07,0,0,-4.38201013253092e-08,0,5.96046447753906e-08,1.15879288387077e-07,0,0,0,0,0,0,0,0,-2.64950532624653e-08,0,0,-1.78962693553331e-07,0,0,-2.27588458301398e-07,0,0,2.65881226368947e-07,0,0,5.48678169565164e-09,0,5.96046447753906e-08,2.38190509094238e-07,0,0,-6.40071773361228e-09,0,0,-2.40931115058629e-07,0,0,-1.86461202034138e-09,0,0,-1.59674215183259e-07,0,0,-3.05678260481557e-09,0,5.96046447753906e-08,1.4580149354515e-07,0,5.96046447753906e-08
 		} 
 	}
-	Geometry: 2564282059216, "Geometry::HideEyeBrow", "Shape" {
+	Geometry: 2213415353712, "Geometry::HideEyeBrow", "Shape" {
 		Version: 100
 		Indexes: *6 {
 			a: 36,37,38,39,40,41
@@ -630,7 +630,7 @@ Objects:  {
 			a: 4.26382683826887e-07,0,0,3.80855425419213e-07,0,0,6.02082579348462e-08,0,5.96046447753906e-08,0,0,0,3.37815635020888e-07,0,0,3.81072283062167e-07,0,0
 		} 
 	}
-	Geometry: 2564282059504, "Geometry::SadEyeBrow", "Shape" {
+	Geometry: 2213415354000, "Geometry::SadEyeBrow", "Shape" {
 		Version: 100
 		Indexes: *6 {
 			a: 36,37,38,39,40,41
@@ -642,7 +642,7 @@ Objects:  {
 			a: 4.26382683826887e-07,0,0,3.80855425419213e-07,0,0,6.02082579348462e-08,0,5.96046447753906e-08,0,0,0,3.37815635020888e-07,0,0,3.81072283062167e-07,0,0
 		} 
 	}
-	Geometry: 2564282060656, "Geometry::AngryEyeBrow", "Shape" {
+	Geometry: 2213415355440, "Geometry::AngryEyeBrow", "Shape" {
 		Version: 100
 		Indexes: *6 {
 			a: 36,37,38,39,40,41
@@ -654,7 +654,7 @@ Objects:  {
 			a: 4.26382683826887e-07,0,0,3.80855425419213e-07,0,0,6.02082579348462e-08,0,5.96046447753906e-08,0,0,0,3.37815635020888e-07,0,0,3.81072283062167e-07,0,0
 		} 
 	}
-	Geometry: 2564282063536, "Geometry::OwO", "Shape" {
+	Geometry: 2213415356880, "Geometry::OwO", "Shape" {
 		Version: 100
 		Indexes: *112 {
 			a: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111
@@ -669,7 +669,7 @@ Objects:  {
 -2.53810668482402e-07,0,-1,3.10896297150975e-07,0,0,5.37485277618543e-07,0,5.96046447753906e-08
 		} 
 	}
-	Model: 2564255288592, "Model::ProtoDRMorph", "Mesh" {
+	Model: 2213388451056, "Model::ProtoDRMorph", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -679,255 +679,255 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	Deformer: 2564254316416, "Deformer::Mesh", "BlendShape" {
+	Deformer: 2213387477440, "Deformer::Mesh", "BlendShape" {
 		Version: 100
 	}
-	Deformer: 2564255300336, "SubDeformer::HideSecondEye", "BlendShapeChannel" {
-		Version: 100
-		DeformPercent: 0
-		FullWeights: *1 {
-			a: 100
-		} 
-	}
-	Deformer: 2564255299008, "SubDeformer::HideBlush", "BlendShapeChannel" {
+	Deformer: 2213388478240, "SubDeformer::HideSecondEye", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564255300960, "SubDeformer::TopFinOuterThin", "BlendShapeChannel" {
+	Deformer: 2213388434400, "SubDeformer::HideBlush", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282194544, "SubDeformer::TopFinInnerThin", "BlendShapeChannel" {
+	Deformer: 2213388352624, "SubDeformer::TopFinOuterThin", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564255186464, "SubDeformer::MidFinTopThin", "BlendShapeChannel" {
+	Deformer: 2213415482912, "SubDeformer::TopFinInnerThin", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282150544, "SubDeformer::MidFinBotThin", "BlendShapeChannel" {
+	Deformer: 2213388438432, "SubDeformer::MidFinTopThin", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282150704, "SubDeformer::MidFinMidBigger", "BlendShapeChannel" {
+	Deformer: 2213415367840, "SubDeformer::MidFinBotThin", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282184816, "SubDeformer::BotFinLR1Thin", "BlendShapeChannel" {
+	Deformer: 2213415368000, "SubDeformer::MidFinMidBigger", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282184976, "SubDeformer::BotFinLR2Thin", "BlendShapeChannel" {
+	Deformer: 2213388467664, "SubDeformer::BotFinLR1Thin", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564255292352, "SubDeformer::BotFinLR3Thin", "BlendShapeChannel" {
+	Deformer: 2213388467824, "SubDeformer::BotFinLR2Thin", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282234352, "SubDeformer::BotFinLR4Thin", "BlendShapeChannel" {
+	Deformer: 2213388479600, "SubDeformer::BotFinLR3Thin", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282231792, "SubDeformer::BotFinLR5Thin", "BlendShapeChannel" {
+	Deformer: 2213388479760, "SubDeformer::BotFinLR4Thin", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282235472, "SubDeformer::TopFinInnerCloseGap", "BlendShapeChannel" {
+	Deformer: 2213388479920, "SubDeformer::BotFinLR5Thin", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282234512, "SubDeformer::ShockedMouth", "BlendShapeChannel" {
+	Deformer: 2213415520080, "SubDeformer::TopFinInnerCloseGap", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282234032, "SubDeformer::HappyMouth", "BlendShapeChannel" {
+	Deformer: 2213415520240, "SubDeformer::ShockedMouth", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282233232, "SubDeformer::OwOMouth", "BlendShapeChannel" {
+	Deformer: 2213415521440, "SubDeformer::HappyMouth", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282233712, "SubDeformer::UpsetMouth", "BlendShapeChannel" {
+	Deformer: 2213415524000, "SubDeformer::OwOMouth", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282233392, "SubDeformer::SillyMouth", "BlendShapeChannel" {
+	Deformer: 2213415523840, "SubDeformer::UpsetMouth", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282232112, "SubDeformer::FlatMouth", "BlendShapeChannel" {
+	Deformer: 2213415520480, "SubDeformer::SillyMouth", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282231952, "SubDeformer::OpenToothMouth", "BlendShapeChannel" {
+	Deformer: 2213415524160, "SubDeformer::FlatMouth", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282233552, "SubDeformer::SadMouth", "BlendShapeChannel" {
+	Deformer: 2213415520640, "SubDeformer::OpenToothMouth", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282233872, "SubDeformer::PogMouth", "BlendShapeChannel" {
+	Deformer: 2213415521760, "SubDeformer::SadMouth", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282234192, "SubDeformer::DerpyMouth", "BlendShapeChannel" {
+	Deformer: 2213415522880, "SubDeformer::PogMouth", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282235152, "SubDeformer::SkinnyEye", "BlendShapeChannel" {
+	Deformer: 2213415522080, "SubDeformer::DerpyMouth", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282232592, "SubDeformer::SadEye", "BlendShapeChannel" {
+	Deformer: 2213415521280, "SubDeformer::SkinnyEye", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282234672, "SubDeformer::CircleEye", "BlendShapeChannel" {
+	Deformer: 2213415523520, "SubDeformer::SadEye", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282234832, "SubDeformer::HeartEye", "BlendShapeChannel" {
+	Deformer: 2213415522400, "SubDeformer::CircleEye", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282234992, "SubDeformer::ClosedEye", "BlendShapeChannel" {
+	Deformer: 2213415522560, "SubDeformer::HeartEye", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282235312, "SubDeformer::BlushEye", "BlendShapeChannel" {
+	Deformer: 2213415522240, "SubDeformer::ClosedEye", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282235632, "SubDeformer::ClosedEyeBrow", "BlendShapeChannel" {
+	Deformer: 2213415522720, "SubDeformer::BlushEye", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282232272, "SubDeformer::AngryEye", "BlendShapeChannel" {
+	Deformer: 2213415521920, "SubDeformer::ClosedEyeBrow", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282232432, "SubDeformer::DeadEye", "BlendShapeChannel" {
+	Deformer: 2213415523360, "SubDeformer::AngryEye", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282232752, "SubDeformer::HideEyeBrow", "BlendShapeChannel" {
+	Deformer: 2213415523040, "SubDeformer::DeadEye", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282232912, "SubDeformer::SadEyeBrow", "BlendShapeChannel" {
+	Deformer: 2213415524320, "SubDeformer::HideEyeBrow", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282233072, "SubDeformer::AngryEyeBrow", "BlendShapeChannel" {
+	Deformer: 2213415520800, "SubDeformer::SadEyeBrow", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
 			a: 100
 		} 
 	}
-	Deformer: 2564282321904, "SubDeformer::OwO", "BlendShapeChannel" {
+	Deformer: 2213415523680, "SubDeformer::AngryEyeBrow", "BlendShapeChannel" {
+		Version: 100
+		DeformPercent: 0
+		FullWeights: *1 {
+			a: 100
+		} 
+	}
+	Deformer: 2213415521600, "SubDeformer::OwO", "BlendShapeChannel" {
 		Version: 100
 		DeformPercent: 0
 		FullWeights: *1 {
@@ -942,229 +942,229 @@ Objects:  {
 Connections:  {
 	
 	;Model::ProtoDRMorph, Model::RootNode
-	C: "OO",2564255288592,0
+	C: "OO",2213388451056,0
 	
 	;Geometry::Mesh, Model::ProtoDRMorph
-	C: "OO",2564255290576,2564255288592
+	C: "OO",2213388453040,2213388451056
 	
 	;Deformer::Mesh, Geometry::Mesh
-	C: "OO",2564254316416,2564255290576
+	C: "OO",2213387477440,2213388453040
 	
 	;SubDeformer::HideSecondEye, Deformer::Mesh
-	C: "OO",2564255300336,2564254316416
+	C: "OO",2213388478240,2213387477440
 	
 	;SubDeformer::HideBlush, Deformer::Mesh
-	C: "OO",2564255299008,2564254316416
+	C: "OO",2213388434400,2213387477440
 	
 	;SubDeformer::TopFinOuterThin, Deformer::Mesh
-	C: "OO",2564255300960,2564254316416
+	C: "OO",2213388352624,2213387477440
 	
 	;SubDeformer::TopFinInnerThin, Deformer::Mesh
-	C: "OO",2564282194544,2564254316416
+	C: "OO",2213415482912,2213387477440
 	
 	;SubDeformer::MidFinTopThin, Deformer::Mesh
-	C: "OO",2564255186464,2564254316416
+	C: "OO",2213388438432,2213387477440
 	
 	;SubDeformer::MidFinBotThin, Deformer::Mesh
-	C: "OO",2564282150544,2564254316416
+	C: "OO",2213415367840,2213387477440
 	
 	;SubDeformer::MidFinMidBigger, Deformer::Mesh
-	C: "OO",2564282150704,2564254316416
+	C: "OO",2213415368000,2213387477440
 	
 	;SubDeformer::BotFinLR1Thin, Deformer::Mesh
-	C: "OO",2564282184816,2564254316416
+	C: "OO",2213388467664,2213387477440
 	
 	;SubDeformer::BotFinLR2Thin, Deformer::Mesh
-	C: "OO",2564282184976,2564254316416
+	C: "OO",2213388467824,2213387477440
 	
 	;SubDeformer::BotFinLR3Thin, Deformer::Mesh
-	C: "OO",2564255292352,2564254316416
+	C: "OO",2213388479600,2213387477440
 	
 	;SubDeformer::BotFinLR4Thin, Deformer::Mesh
-	C: "OO",2564282234352,2564254316416
+	C: "OO",2213388479760,2213387477440
 	
 	;SubDeformer::BotFinLR5Thin, Deformer::Mesh
-	C: "OO",2564282231792,2564254316416
+	C: "OO",2213388479920,2213387477440
 	
 	;SubDeformer::TopFinInnerCloseGap, Deformer::Mesh
-	C: "OO",2564282235472,2564254316416
+	C: "OO",2213415520080,2213387477440
 	
 	;SubDeformer::ShockedMouth, Deformer::Mesh
-	C: "OO",2564282234512,2564254316416
+	C: "OO",2213415520240,2213387477440
 	
 	;SubDeformer::HappyMouth, Deformer::Mesh
-	C: "OO",2564282234032,2564254316416
+	C: "OO",2213415521440,2213387477440
 	
 	;SubDeformer::OwOMouth, Deformer::Mesh
-	C: "OO",2564282233232,2564254316416
+	C: "OO",2213415524000,2213387477440
 	
 	;SubDeformer::UpsetMouth, Deformer::Mesh
-	C: "OO",2564282233712,2564254316416
+	C: "OO",2213415523840,2213387477440
 	
 	;SubDeformer::SillyMouth, Deformer::Mesh
-	C: "OO",2564282233392,2564254316416
+	C: "OO",2213415520480,2213387477440
 	
 	;SubDeformer::FlatMouth, Deformer::Mesh
-	C: "OO",2564282232112,2564254316416
+	C: "OO",2213415524160,2213387477440
 	
 	;SubDeformer::OpenToothMouth, Deformer::Mesh
-	C: "OO",2564282231952,2564254316416
+	C: "OO",2213415520640,2213387477440
 	
 	;SubDeformer::SadMouth, Deformer::Mesh
-	C: "OO",2564282233552,2564254316416
+	C: "OO",2213415521760,2213387477440
 	
 	;SubDeformer::PogMouth, Deformer::Mesh
-	C: "OO",2564282233872,2564254316416
+	C: "OO",2213415522880,2213387477440
 	
 	;SubDeformer::DerpyMouth, Deformer::Mesh
-	C: "OO",2564282234192,2564254316416
+	C: "OO",2213415522080,2213387477440
 	
 	;SubDeformer::SkinnyEye, Deformer::Mesh
-	C: "OO",2564282235152,2564254316416
+	C: "OO",2213415521280,2213387477440
 	
 	;SubDeformer::SadEye, Deformer::Mesh
-	C: "OO",2564282232592,2564254316416
+	C: "OO",2213415523520,2213387477440
 	
 	;SubDeformer::CircleEye, Deformer::Mesh
-	C: "OO",2564282234672,2564254316416
+	C: "OO",2213415522400,2213387477440
 	
 	;SubDeformer::HeartEye, Deformer::Mesh
-	C: "OO",2564282234832,2564254316416
+	C: "OO",2213415522560,2213387477440
 	
 	;SubDeformer::ClosedEye, Deformer::Mesh
-	C: "OO",2564282234992,2564254316416
+	C: "OO",2213415522240,2213387477440
 	
 	;SubDeformer::BlushEye, Deformer::Mesh
-	C: "OO",2564282235312,2564254316416
+	C: "OO",2213415522720,2213387477440
 	
 	;SubDeformer::ClosedEyeBrow, Deformer::Mesh
-	C: "OO",2564282235632,2564254316416
+	C: "OO",2213415521920,2213387477440
 	
 	;SubDeformer::AngryEye, Deformer::Mesh
-	C: "OO",2564282232272,2564254316416
+	C: "OO",2213415523360,2213387477440
 	
 	;SubDeformer::DeadEye, Deformer::Mesh
-	C: "OO",2564282232432,2564254316416
+	C: "OO",2213415523040,2213387477440
 	
 	;SubDeformer::HideEyeBrow, Deformer::Mesh
-	C: "OO",2564282232752,2564254316416
+	C: "OO",2213415524320,2213387477440
 	
 	;SubDeformer::SadEyeBrow, Deformer::Mesh
-	C: "OO",2564282232912,2564254316416
+	C: "OO",2213415520800,2213387477440
 	
 	;SubDeformer::AngryEyeBrow, Deformer::Mesh
-	C: "OO",2564282233072,2564254316416
+	C: "OO",2213415523680,2213387477440
 	
 	;SubDeformer::OwO, Deformer::Mesh
-	C: "OO",2564282321904,2564254316416
+	C: "OO",2213415521600,2213387477440
 	
 	;Geometry::HideSecondEye, SubDeformer::HideSecondEye
-	C: "OO",2564255299632,2564255300336
+	C: "OO",2213388453824,2213388478240
 	
 	;Geometry::HideBlush, SubDeformer::HideBlush
-	C: "OO",2564255309296,2564255299008
+	C: "OO",2213388456992,2213388434400
 	
 	;Geometry::TopFinOuterThin, SubDeformer::TopFinOuterThin
-	C: "OO",2564255308720,2564255300960
+	C: "OO",2213388454976,2213388352624
 	
 	;Geometry::TopFinInnerThin, SubDeformer::TopFinInnerThin
-	C: "OO",2564255311888,2564282194544
+	C: "OO",2213388456416,2213415482912
 	
 	;Geometry::MidFinTopThin, SubDeformer::MidFinTopThin
-	C: "OO",2564255312176,2564255186464
+	C: "OO",2213388456704,2213388438432
 	
 	;Geometry::MidFinBotThin, SubDeformer::MidFinBotThin
-	C: "OO",2564255309008,2564282150544
+	C: "OO",2213388453536,2213415367840
 	
 	;Geometry::MidFinMidBigger, SubDeformer::MidFinMidBigger
-	C: "OO",2564255311600,2564282150704
+	C: "OO",2213388455840,2213415368000
 	
 	;Geometry::BotFinLR1Thin, SubDeformer::BotFinLR1Thin
-	C: "OO",2564255309584,2564282184816
+	C: "OO",2213388455264,2213388467664
 	
 	;Geometry::BotFinLR2Thin, SubDeformer::BotFinLR2Thin
-	C: "OO",2564255309872,2564282184976
+	C: "OO",2213388454688,2213388467824
 	
 	;Geometry::BotFinLR3Thin, SubDeformer::BotFinLR3Thin
-	C: "OO",2564255311024,2564255292352
+	C: "OO",2213388454112,2213388479600
 	
 	;Geometry::BotFinLR4Thin, SubDeformer::BotFinLR4Thin
-	C: "OO",2564255311312,2564282234352
+	C: "OO",2213388454400,2213388479760
 	
 	;Geometry::BotFinLR5Thin, SubDeformer::BotFinLR5Thin
-	C: "OO",2564255310448,2564282231792
+	C: "OO",2213388455552,2213388479920
 	
 	;Geometry::TopFinInnerCloseGap, SubDeformer::TopFinInnerCloseGap
-	C: "OO",2564255310160,2564282235472
+	C: "OO",2213388456128,2213415520080
 	
 	;Geometry::ShockedMouth, SubDeformer::ShockedMouth
-	C: "OO",2564255310736,2564282234512
+	C: "OO",2213415357168,2213415520240
 	
 	;Geometry::HappyMouth, SubDeformer::HappyMouth
-	C: "OO",2564282058640,2564282234032
+	C: "OO",2213415354864,2213415521440
 	
 	;Geometry::OwOMouth, SubDeformer::OwOMouth
-	C: "OO",2564282063824,2564282233232
+	C: "OO",2213415355728,2213415524000
 	
 	;Geometry::UpsetMouth, SubDeformer::UpsetMouth
-	C: "OO",2564282065840,2564282233712
+	C: "OO",2213415358320,2213415523840
 	
 	;Geometry::SillyMouth, SubDeformer::SillyMouth
-	C: "OO",2564282058928,2564282233392
+	C: "OO",2213415351120,2213415520480
 	
 	;Geometry::FlatMouth, SubDeformer::FlatMouth
-	C: "OO",2564282059792,2564282232112
+	C: "OO",2213415356016,2213415524160
 	
 	;Geometry::OpenToothMouth, SubDeformer::OpenToothMouth
-	C: "OO",2564282064688,2564282231952
+	C: "OO",2213415355152,2213415520640
 	
 	;Geometry::SadMouth, SubDeformer::SadMouth
-	C: "OO",2564282064976,2564282233552
+	C: "OO",2213415353424,2213415521760
 	
 	;Geometry::PogMouth, SubDeformer::PogMouth
-	C: "OO",2564282066128,2564282233872
+	C: "OO",2213415351408,2213415522880
 	
 	;Geometry::DerpyMouth, SubDeformer::DerpyMouth
-	C: "OO",2564282061808,2564282234192
+	C: "OO",2213415354576,2213415522080
 	
 	;Geometry::SkinnyEye, SubDeformer::SkinnyEye
-	C: "OO",2564282065552,2564282235152
+	C: "OO",2213415353136,2213415521280
 	
 	;Geometry::SadEye, SubDeformer::SadEye
-	C: "OO",2564282062096,2564282232592
+	C: "OO",2213415351696,2213415523520
 	
 	;Geometry::CircleEye, SubDeformer::CircleEye
-	C: "OO",2564282061232,2564282234672
+	C: "OO",2213415358896,2213415522400
 	
 	;Geometry::HeartEye, SubDeformer::HeartEye
-	C: "OO",2564282062384,2564282234832
+	C: "OO",2213415351984,2213415522560
 	
 	;Geometry::ClosedEye, SubDeformer::ClosedEye
-	C: "OO",2564282060080,2564282234992
+	C: "OO",2213415358608,2213415522240
 	
 	;Geometry::BlushEye, SubDeformer::BlushEye
-	C: "OO",2564282058352,2564282235312
+	C: "OO",2213415357744,2213415522720
 	
 	;Geometry::ClosedEyeBrow, SubDeformer::ClosedEyeBrow
-	C: "OO",2564282065264,2564282235632
+	C: "OO",2213415358032,2213415521920
 	
 	;Geometry::AngryEye, SubDeformer::AngryEye
-	C: "OO",2564282062960,2564282232272
+	C: "OO",2213415352848,2213415523360
 	
 	;Geometry::DeadEye, SubDeformer::DeadEye
-	C: "OO",2564282060368,2564282232432
+	C: "OO",2213415352560,2213415523040
 	
 	;Geometry::HideEyeBrow, SubDeformer::HideEyeBrow
-	C: "OO",2564282059216,2564282232752
+	C: "OO",2213415353712,2213415524320
 	
 	;Geometry::SadEyeBrow, SubDeformer::SadEyeBrow
-	C: "OO",2564282059504,2564282232912
+	C: "OO",2213415354000,2213415520800
 	
 	;Geometry::AngryEyeBrow, SubDeformer::AngryEyeBrow
-	C: "OO",2564282060656,2564282233072
+	C: "OO",2213415355440,2213415523680
 	
 	;Geometry::OwO, SubDeformer::OwO
-	C: "OO",2564282063536,2564282321904
+	C: "OO",2213415356880,2213415521600
 }
 ;Takes section
 ;----------------------------------------------------

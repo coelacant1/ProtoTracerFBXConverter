@@ -9,7 +9,7 @@ class MorphCreator:
         self.morphObj = morphObj
 
     def GetHeader(self, name):
-        return "#pragma once\n\n#include \"Arduino.h\"\n#include \"..\Math\Rotation.h\"\n#include \"Morph.h\"\n\n#include \"..\Math\VertexGroup.h\"\n\nclass " + name + "{\npublic:\n"
+        return "#pragma once\n\n#include \"Arduino.h\"\n#include \"..\Math\Rotation.h\"\n#include \"Morph.h\"\n#include \"..\Materials\SimpleMaterial.h\"\n#include \"..\Render\IndexGroup.h\"\n\nclass " + name + "{\npublic:\n"
 
     def GetMorphEnums(self):
         enums = "\tenum Morphs {\n"
@@ -34,18 +34,20 @@ class MorphCreator:
         return basisVertices
 
     def GetBasisIndexes(self):
-        basisIndexes = "\tVertexGroup basisIndexes[" + str(self.morphObj.baseMesh.TriangleCount) + "] = {"
+        basisIndexes = "\tIndexGroup basisIndexes[" + str(self.morphObj.baseMesh.TriangleCount) + "] = {"
 
         for i, index in enumerate(self.morphObj.baseMesh.Triangles):
             if i in {len(self.morphObj.baseMesh.Triangles) - 1}:
-                basisIndexes += "VertexGroup(" + str(index.A) + "," + str(index.B) + "," + str(index.C) + ")};\n"
+                basisIndexes += "IndexGroup(" + str(index.A) + "," + str(index.B) + "," + str(index.C) + ")};\n"
             else:
-                basisIndexes += "VertexGroup(" + str(index.A) + "," + str(index.B) + "," + str(index.C) + "),"
+                basisIndexes += "IndexGroup(" + str(index.A) + "," + str(index.B) + "," + str(index.C) + "),"
 
         return basisIndexes
 
     def GetBasisObject(self):
-        return "\tObject3D basisObj = Object3D(" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + ", " + str(self.morphObj.baseMesh.TriangleCount) + ", basisVertices, basisIndexes);\n\n"
+        lines =  "\tTriangleGroup triangleGroup = TriangleGroup(&basisVertices[0], &basisIndexes[0], " + str(int(self.morphObj.baseMesh.VertexCount / 3)) + ", " + str(self.morphObj.baseMesh.TriangleCount) + ");\n"
+        lines += "\tSimpleMaterial simpleMaterial = SimpleMaterial(RGBColor(128, 128, 128));\n"
+        return lines + "\tObject3D basisObj = Object3D(&triangleGroup, &simpleMaterial);\n\n"
         
     def GetMorphIndexes(self):
         morphIndexes = "\tstatic const byte morphCount = " + str(len(self.morphObj.shapeKeys)) + ";\n"
@@ -124,12 +126,12 @@ class MorphCreator:
         publicFunctions += "\t\tbasisObj.ResetVertices();\n\n"
         publicFunctions += "\t\tfor(int i = 0; i < morphCount; i++){\n"
         publicFunctions += "\t\t\tif(morphs[i].Weight > 0.0f){\n"
-        publicFunctions += "\t\t\t\tmorphs[i].MorphObject3D(&basisObj);\n"
+        publicFunctions += "\t\t\t\tmorphs[i].MorphObject3D(basisObj.GetTriangleGroup());\n"
         publicFunctions += "\t\t\t}\n"
         publicFunctions += "\t\t}\n\n"
 
-        publicFunctions += "\t\tbasisObj.Rotate(offsetRotation);\n"
-        publicFunctions += "\t\tbasisObj.MoveRelative(offsetPosition);\n"
+        #publicFunctions += "\t\tbasisObj.Rotate(offsetRotation);\n"
+        #publicFunctions += "\t\tbasisObj.MoveRelative(offsetPosition);\n"
         publicFunctions += "\t}\n};\n"
 
         return publicFunctions
@@ -146,7 +148,7 @@ class MorphCreator:
         morphCode += self.GetMorphIndexes()
         morphCode += self.GetMorphVectors()
         morphCode += self.GetMorphObjects()
-        morphCode += self.GetRotationPositionOffset()
+        #morphCode += self.GetRotationPositionOffset()
         morphCode += self.GetPublicFunctions(name)
 
         return morphCode
