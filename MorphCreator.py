@@ -9,7 +9,7 @@ class MorphCreator:
         self.morphObj = morphObj
 
     def GetHeader(self, name):
-        return "#pragma once\n\n#include \"Arduino.h\"\n#include \"..\Math\Rotation.h\"\n#include \"Morph.h\"\n#include \"..\Materials\SimpleMaterial.h\"\n#include \"..\Render\IndexGroup.h\"\n#include \"..\Render\Object3D.h\"\n\nclass " + name + "{\npublic:\n"
+        return "#pragma once\n\n#include \"Arduino.h\"\n#include \"..\Math\Rotation.h\"\n#include \"Morph.h\"\n#include \"..\Materials\RGBColor.h\"\n#include \"..\Render\IndexGroup.h\"\n#include \"..\Render\Object3D.h\"\n\nclass " + name + "{\npublic:\n"
 
     def GetMorphEnums(self):
         enums = "\tenum Morphs {\n"
@@ -46,7 +46,7 @@ class MorphCreator:
 
     def GetBasisObject(self):
         lines =  "\tTriangleGroup triangleGroup = TriangleGroup(&basisVertices[0], &basisIndexes[0], " + str(int(self.morphObj.baseMesh.VertexCount / 3)) + ", " + str(self.morphObj.baseMesh.TriangleCount) + ");\n"
-        lines += "\tSimpleMaterial simpleMaterial = SimpleMaterial(RGBColor(128, 128, 128));\n"
+        lines += "\tRGBColor simpleMaterial = RGBColor(128, 128, 128);\n"
         return lines + "\tObject3D basisObj = Object3D(&triangleGroup, &simpleMaterial);\n\n"
         
     def GetMorphIndexes(self):
