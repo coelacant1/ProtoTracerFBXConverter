@@ -112,7 +112,7 @@ def GetBaseMesh(dataString, scale):
     baseMesh = Object3D()
 
     for i, line in enumerate(lines):
-        if line.find("\"Geometry::Mesh\", \"Mesh\" {") >= 0:
+        if line.find("\"Geometry::") >= 0 and line.find("\"Mesh\" {") >= 0 :
             vertexString = ""
 
             for l in range(2, 20):
