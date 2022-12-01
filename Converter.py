@@ -7,10 +7,10 @@ from FBXReader import *
 from MorphCreator import *
 import os
 
-origFileName = "Example Files\\NukudeNoEye.fbx"
-newFileName = "Example Files\\NukudeNoEyeAscii.fbx"
-outputCPPName = "Output\\NukudeNoEyeFace.h"
-name = "NukudeNoEyeFace"
+origFileName = "Example Files\\GammaFace.fbx"
+newFileName = "Example Files\\GammaFaceAscii.fbx"
+outputCPPName = "Output\\GammaFace.h"
+name = "GammaFace"
 
 os.system("FbXFormatConverter.exe -c \"" + origFileName + "\" -o \"" + newFileName + "\" -ascii")
 
