@@ -7,10 +7,10 @@ from FBXReader import *
 from MorphCreator import *
 import os
 
-origFileName = "Example Files\\GammaFace.fbx"
-newFileName = "Example Files\\GammaFaceAscii.fbx"
-outputCPPName = "Output\\GammaFace.h"
-name = "GammaFace"
+name = "TamamoSec"
+origFileName = f"Commissions\{name}.fbx"
+newFileName = f"Commissions\{name}Ascii.fbx"
+outputName = f"..\ProtoTracer\src\Morph\Commissions\{name}.h"
 
 os.system("FbXFormatConverter.exe -c \"" + origFileName + "\" -o \"" + newFileName + "\" -ascii")
 
@@ -22,7 +22,7 @@ with open(newFileName, 'r') as file:
     morphCodeString = morphCreator.GenerateMorphCode(name).expandtabs(4)
 
     #print(morphCodeString)
-    f = open(outputCPPName, "w")
+    f = open(outputName, "w")
     f.write(morphCodeString)
     f.close()
     
