@@ -9,7 +9,10 @@ class MorphCreator:
         self.morphObj = morphObj
 
     def GetHeader(self, name):
-        return "#pragma once\n\n#include \"Arduino.h\"\n#include \"..\Math\Rotation.h\"\n#include \"Morph.h\"\n#include \"..\Materials\SimpleMaterial.h\"\n#include \"..\Render\IndexGroup.h\"\n#include \"..\Render\Object3D.h\"\n\nclass " + name + "{\npublic:\n"
+        return "#pragma once\n\n#include \"..\\Utils\\Morph.h\"\n#include \"..\\..\\..\\..\\Utils\\Math\\Rotation.h\"\n#include \"..\\..\\..\\..\\Scene\\Materials\\Static\\SimpleMaterial.h\"\n#include \"..\\..\\..\\..\\Scene\\Objects\\Object3D.h\"\n#include \"..\\..\\..\\..\\Renderer\\Utils\\IndexGroup.h\"\n\nclass " + name + "{\npublic:\n"
+
+        #return "#pragma once\n\n#include \"..\Utils\Morph.h\"\n#include \"..\..\..\..\Utils\Math\Rotation.h\"\n#include \"..\..\..\..\Scene\Materials\Static\SimpleMaterial.h\"\n#include \"..\..\..\..\Scene\Objects\Object3D.h\"\n#include \"..\..\..\..\Renderer\Utils\IndexGroup.h\"\n\nclass " + name + "{\npublic:\n"
+        #return "#pragma once\n\n#include \"Arduino.h\"\n#include \"..\Math\Rotation.h\"\n#include \"Morph.h\"\n#include \"..\Materials\SimpleMaterial.h\"\n#include \"..\Render\IndexGroup.h\"\n#include \"..\Render\Object3D.h\"\n\nclass " + name + "{\npublic:\n"
 
     def GetMorphEnums(self):
         enums = "\tenum Morphs {\n"
@@ -22,7 +25,7 @@ class MorphCreator:
         return enums
 
     def GetBasisVertices(self):
-        basisVertices = "\tVector3D basisVertices[" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "] = {"
+        basisVertices = "\tVector3D* basisVertices = new Vector3D[" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "] {"
 
         for i, vertex in enumerate(self.morphObj.baseMesh.Vertices):
             if i in {len(self.morphObj.baseMesh.Vertices) - 1}:
@@ -34,7 +37,7 @@ class MorphCreator:
         return basisVertices
 
     def GetBasisIndexes(self):
-        basisIndexes = "\tIndexGroup basisIndexes[" + str(self.morphObj.baseMesh.TriangleCount) + "] = {"
+        basisIndexes = "\tIndexGroup* basisIndexes = new IndexGroup[" + str(self.morphObj.baseMesh.TriangleCount) + "] {"
 
         for i, index in enumerate(self.morphObj.baseMesh.Triangles):
             if i in {len(self.morphObj.baseMesh.Triangles) - 1}:
@@ -45,15 +48,16 @@ class MorphCreator:
         return basisIndexes
 
     def GetBasisObject(self):
-        lines =  "\tTriangleGroup triangleGroup = TriangleGroup(&basisVertices[0], &basisIndexes[0], " + str(int(self.morphObj.baseMesh.VertexCount / 3)) + ", " + str(self.morphObj.baseMesh.TriangleCount) + ");\n"
+        lines =  "\tStaticTriangleGroup<" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "," + str(self.morphObj.baseMesh.TriangleCount) + ">* triangleGroup = new StaticTriangleGroup<" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "," + str(self.morphObj.baseMesh.TriangleCount) + ">(&basisVertices[0], &basisIndexes[0]);\n"
+        lines += "\tTriangleGroup<" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "," + str(self.morphObj.baseMesh.TriangleCount) + ">* triangleGroupMemory = new TriangleGroup<" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "," + str(self.morphObj.baseMesh.TriangleCount) + ">(triangleGroup);\n"
         lines += "\tSimpleMaterial simpleMaterial = SimpleMaterial(RGBColor(128, 128, 128));\n"
-        return lines + "\tObject3D basisObj = Object3D(&triangleGroup, &simpleMaterial);\n\n"
+        return lines + "\tObject3D basisObj = Object3D(triangleGroup, triangleGroupMemory, &simpleMaterial);\n\n"
         
     def GetMorphIndexes(self):
-        morphIndexes = "\tstatic const byte morphCount = " + str(len(self.morphObj.shapeKeys)) + ";\n"
+        morphIndexes = "\tstatic const uint8_t morphCount = " + str(len(self.morphObj.shapeKeys)) + ";\n"
 
         for shapeKey in self.morphObj.shapeKeys:
-            morphIndexes += "\tint " + shapeKey.Name + "Indexes[" + str(shapeKey.IndexCount) + "] = {"
+            morphIndexes += "\tint* " + shapeKey.Name + "Indexes = new int[" + str(shapeKey.IndexCount) + "] {"
 
             for i, index in enumerate(shapeKey.Indexes):
                 if i in {len(shapeKey.Indexes) - 1}:
@@ -69,7 +73,7 @@ class MorphCreator:
         morphVectors = ""
 
         for shapeKey in self.morphObj.shapeKeys:
-            morphVectors += "\tVector3D " + shapeKey.Name + "Vectors[" + str(int(shapeKey.VertexCount / 3)) + "] = {"
+            morphVectors += "\tVector3D* " + shapeKey.Name + "Vectors = new Vector3D[" + str(int(shapeKey.VertexCount / 3)) + "] {"
 
             for i, vertex in enumerate(shapeKey.Vertices):
                 if i in {len(shapeKey.Vertices) - 1}:

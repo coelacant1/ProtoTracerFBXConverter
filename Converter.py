@@ -7,10 +7,10 @@ from FBXReader import *
 from MorphCreator import *
 import os
 
-name = "TamamoSec"
+name = "DrGonzoSD"
 origFileName = f"Commissions\{name}.fbx"
-newFileName = f"Commissions\{name}Ascii.fbx"
-outputName = f"..\ProtoTracer\src\Morph\Commissions\{name}.h"
+newFileName = f"Output\{name}Ascii.fbx"
+outputName = f"..\ProtoTracer\lib\ProtoTracer\Assets\Models\FBX\Commissions\{name}.h"
 
 os.system("FbXFormatConverter.exe -c \"" + origFileName + "\" -o \"" + newFileName + "\" -ascii")
 
