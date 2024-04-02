@@ -7,7 +7,7 @@ from FBXReader import *
 from MorphCreator import *
 import os
 
-name = "DrGonzoSD"
+name = "UnicornZhenja"
 origFileName = f"Commissions\{name}.fbx"
 newFileName = f"Output\{name}Ascii.fbx"
 outputName = f"..\ProtoTracer\lib\ProtoTracer\Assets\Models\FBX\Commissions\{name}.h"

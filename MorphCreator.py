@@ -48,10 +48,11 @@ class MorphCreator:
         return basisIndexes
 
     def GetBasisObject(self):
-        lines =  "\tStaticTriangleGroup<" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "," + str(self.morphObj.baseMesh.TriangleCount) + ">* triangleGroup = new StaticTriangleGroup<" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "," + str(self.morphObj.baseMesh.TriangleCount) + ">(&basisVertices[0], &basisIndexes[0]);\n"
-        lines += "\tTriangleGroup<" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "," + str(self.morphObj.baseMesh.TriangleCount) + ">* triangleGroupMemory = new TriangleGroup<" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "," + str(self.morphObj.baseMesh.TriangleCount) + ">(triangleGroup);\n"
+        lines =  "\tStaticTriangleGroup<" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "," + str(self.morphObj.baseMesh.TriangleCount) + "> triangleGroup = StaticTriangleGroup<" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "," + str(self.morphObj.baseMesh.TriangleCount) + ">(&basisVertices[0], &basisIndexes[0]);\n"
+        lines += "\tTriangleGroup<" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "," + str(self.morphObj.baseMesh.TriangleCount) + "> triangleGroupMemory = TriangleGroup<" + str(int(self.morphObj.baseMesh.VertexCount / 3)) + "," + str(self.morphObj.baseMesh.TriangleCount) + ">(&triangleGroup);\n"
         lines += "\tSimpleMaterial simpleMaterial = SimpleMaterial(RGBColor(128, 128, 128));\n"
-        return lines + "\tObject3D basisObj = Object3D(triangleGroup, triangleGroupMemory, &simpleMaterial);\n\n"
+
+        return lines + "\tObject3D basisObj = Object3D(&triangleGroup, &triangleGroupMemory, &simpleMaterial);\n\n"
         
     def GetMorphIndexes(self):
         morphIndexes = "\tstatic const uint8_t morphCount = " + str(len(self.morphObj.shapeKeys)) + ";\n"
@@ -134,8 +135,6 @@ class MorphCreator:
         publicFunctions += "\t\t\t}\n"
         publicFunctions += "\t\t}\n\n"
 
-        #publicFunctions += "\t\tbasisObj.Rotate(offsetRotation);\n"
-        #publicFunctions += "\t\tbasisObj.MoveRelative(offsetPosition);\n"
         publicFunctions += "\t}\n};\n"
 
         return publicFunctions
